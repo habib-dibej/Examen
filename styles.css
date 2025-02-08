@@ -190,3 +190,16 @@ label {
         font-size: 0.9em;
     }
 }
+.correct-answer {
+    background-color: #d4edda !important;
+    border-left: 4px solid #28a745 !important;
+}
+
+.incorrect-answer {
+    background-color: #f8d7da !important;
+    border-left: 4px solid #dc3545 !important;
+}
+
+.answer-item {
+    transition: all 0.3s ease;
+}
