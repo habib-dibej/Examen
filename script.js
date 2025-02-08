@@ -451,7 +451,7 @@ const correctAnswers = {
     "Question 30": "A",
     "Question 31": "D",
     "Question 32": "B",
-    "Question 33": "F",
+    "Question 33": "D",
     "Question 34": "A",
     "Question 35": "A,F",
     "Question 36": "C",
@@ -476,7 +476,7 @@ const correctAnswers = {
     "Question 55": "A",
     "Question 56": "B",
     "Question 57": "C",
-    "Question 58": "C",
+    "Question 58": "E",
     "Question 59": "C",
     "Question 60": "B,D",
     "Question 61": "E"
