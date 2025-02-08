@@ -550,13 +550,28 @@ function calculateScore() {
     document.querySelectorAll('.question-box').forEach(questionDiv => {
         let questionNumber = questionDiv.dataset.questionNumber;
         let correctAnswer = correctAnswers[`Question ${questionNumber}`];
+        let correctAnswersArray = correctAnswer.split(',');
         let selectedOptions = Array.from(questionDiv.querySelectorAll('input:checked'))
                                    .map(input => input.value)
                                    .sort()
                                    .join(',');
         
-        // Reset highlighting
+        // Réinitialiser le style
         questionDiv.classList.remove('correct', 'incorrect');
+        questionDiv.querySelectorAll('.answer-item').forEach(answer => {
+            answer.classList.remove('correct-answer', 'incorrect-answer');
+        });
+        
+        // Mettre en évidence les bonnes réponses
+        questionDiv.querySelectorAll('.answer-item').forEach(answerItem => {
+            const input = answerItem.querySelector('input');
+            if (correctAnswersArray.includes(input.value)) {
+                answerItem.classList.add('correct-answer');
+            }
+            if (input.checked && !correctAnswersArray.includes(input.value)) {
+                answerItem.classList.add('incorrect-answer');
+            }
+        });
         
         if (selectedOptions === correctAnswer) {
             score++;
@@ -571,8 +586,8 @@ function calculateScore() {
 }
 function resetExam() {
     // Réinitialiser les sélections
-    document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(input => {
-        input.checked = false;
+    document.querySelectorAll('.answer-item').forEach(answer => {
+        answer.classList.remove('correct-answer', 'incorrect-answer');
     });
     
     // Réinitialiser le style des questions
