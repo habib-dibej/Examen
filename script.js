@@ -155,7 +155,7 @@ Question 24 - Quelle commande permer o ifier le nombre de jours d'avertissement 
 A  chage -M
 B  chage -a
 C  chage -W
-D  chage -1
+D  chage -l
 E  chage -m
 
 Question 25 - Quelle commande permet de modifier le login (nom de connexion) d'un utilisateur donné ?
@@ -236,10 +236,10 @@ E  device
 F  timer
 
 Question 36 - Comment définir un timer qui s'exécute toutes les heures à partir de 10h ?
-A OnCalendar =*-*-* 10:00:00
-B OnCalendar=10:00:00/1:00
-C OnCalendar=10:00:00/1
-D OnCalendar=hourly 12:00
+A  OnCalendar =*-*-* 10:00:00
+B  OnCalendar=10:00:00/1:00
+C  OnCalendar=10:00:00/1
+D  OnCalendar=hourly 12:00
 
 Question 37 - Quelle commande permet de changer l'adresse MAC de l'interface Ethernet eth0?
 A  ifconfig eth0 up hw 70:4d:7b:70:d2:3e
